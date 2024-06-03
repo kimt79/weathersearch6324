@@ -9,29 +9,41 @@
 
 <body>
   <header>
-    <form>
-      <input type="search" placeholder="Enter a city..." required />
-      <input type="submit" value="Search" />
+    <form class="search-form" id="search-form">
+      <input type="search" placeholder="Enter a city..." required class="search-form-input" id="search-form-input" />
+      <input type="submit" value="Search" class="search-form-button" />
     </form>
   </header>
   <main>
-    <div>
-      <h1>
+    <div class="weather-app-data">
+      <h1 class="weather-app-city" id="city">
         Kansas City
       </h1>
-      <p>
-        Tuesday 14:49, scattered clouds
+      <p class="weather-app-details">
+        <span id="day">Tuesday</span>
+        <span id="time">14:49</span>
+        ","
+        <span id="description">scattered clouds</span>
         <br />
-        Humidity: 66%, Wind: 11 mph
+        "Humidity: " <strong id="humidity">66%</strong> ", Wind:"
+        <strong id="wind-speed">11 mph</strong>
       </p>
     </div>
-    <div>🌤 77°F</div>
+    <div class="weather-app-temperature-container">
+      <div id="icon">
+        <img src=" " http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"" alt="sun icon"
+          class="weather-app-icon">
+      </div>
+      <div class="weather-app-temperature" id="temperature">77</div>
+      <div class="weather-app-unit">°F</div>
+    </div>
   </main>
 
 </body>
-<footer>Coded by <a href="https://www.shecodes.io/graduates/110408-kimberly-thompson">Kimberly Thompson</a> is
+<footer>Coded by <a href="https://www.shecodes.io/graduates/110408-kimberly-thompson" target="_blank">Kimberly
+    Thompson</a> is
   open-sourced
-  on <a href="https://github.com/kimt79/weathersearch6324">Github</a> and hosted on <a
-    href="https://app.netlify.com/sites/weathersearch6324/overview">Netlify</a></footer>
+  on <a href="https://github.com/kimt79/weathersearch6324" target="_blank">Github</a> and hosted on <a
+    href="https://app.netlify.com/sites/weathersearch6324/overview" target="_blank">Netlify</a></footer>
 
 </html>
