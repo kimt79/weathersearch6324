@@ -6,39 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather forecast App</title>
   <link rel="stylesheet" href="src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <form class="search-form" id="search-form">
-      <input type="search" placeholder="Enter a city..." required class="search-form-input" id="search-form-input" />
-      <input type="submit" value="Search" class="search-form-button" />
-    </form>
-  </header>
-  <main>
-    <div class="weather-app-data">
-      <h1 class="weather-app-city" id="city">
-        Kansas City
-      </h1>
-      <p class="weather-app-details">
-        <span id="day">Tuesday</span>
-        <span id="time">14:49</span>
-        ,
-        <span id="description">Sunny, clear sky</span>
-        <br />
-        Humidity: <strong id="humidity">66%</strong>, Wind:
-        <strong id="wind-speed">11 mph</strong>
-      </p>
-    </div>
-    <div class="weather-app-temperature-container">
-      <div id="icon">
-        <img src=" " http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"" alt="sun icon"
-          class="weather-app-icon">
+  <div class="weather-app">
+    <header>
+      <form class="search-form" id="search-form">
+        <input type="search" placeholder="Enter a city..." required class="search-form-input" id="search-form-input" />
+        <input type="submit" value="Search" class="search-form-button" />
+      </form>
+    </header>
+    <main>
+      <div class="weather-app-data">
+        <h1 class="weather-app-city" id="city">
+          Kansas City
+        </h1>
+        <p class="weather-app-details">
+          <span id="day">Tuesday</span>
+          <span id="time">14:49</span>
+          ,
+          <span id="description">Sunny, clear sky</span>
+          <br />
+          Humidity: <strong id="humidity">66%</strong>, Wind:
+          <strong id="wind-speed">11 mph</strong>
+        </p>
+
+        <div class="weather-app-temperature-container">
+          <div id="icon">
+            <img src=" " http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"" alt="sun icon"
+              class="weather-app-icon">
+          </div>
+          <div class="weather-app-temperature" id="temperature">77</div>
+          <div class="weather-app-unit">°F</div>
+        </div>
       </div>
-      <div class="weather-app-temperature" id="temperature">77</div>
-      <div class="weather-app-unit">°F</div>
-    </div>
-  </main>
+    </main>
+
 
 </body>
 <footer>Coded by <a href="https://www.shecodes.io/graduates/110408-kimberly-thompson" target="_blank">Kimberly
@@ -46,5 +53,6 @@
   open-sourced
   on <a href="https://github.com/kimt79/weathersearch6324" target="_blank">Github</a> and hosted on <a
     href="https://app.netlify.com/sites/weathersearch6324/overview" target="_blank">Netlify</a></footer>
+</div>
 
 </html>
