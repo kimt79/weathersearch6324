@@ -17,6 +17,8 @@ function refreshWeather(response) {
   timeElement.innerHTML = formateDate(date);
   windSpeedElement.innerHTML = `${response.data.wind.speed}mph`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
+
+  getForecast(response.data.city);
 }
 
 function formateDate(date) {
@@ -55,7 +57,13 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "77tbfd3604c3o03440d5aae80f7caf31";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
@@ -82,4 +90,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Kansas City");
-displayForecast();
