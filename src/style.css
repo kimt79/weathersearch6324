@@ -1,9 +1,7 @@
 body {
   background-color: #F9F7FE;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 header {
@@ -66,7 +64,11 @@ a {
 
 .weather-app-city {
   margin: 0;
-  font-size: 38px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 42px;
   line-height: 48px;
 }
 
@@ -90,17 +92,18 @@ a {
   width: 88px;
   height: 88px;
 
+
 }
 
 .weather-app-temperature {
   font-size: 88px;
-  line-height: 22px;
+  line-height: 88px;
   font-weight: bold;
   margin-left: 10px;
 }
 
 .weather-app-unit {
   font-size: 28px;
-
+  margin-top: 6px;
 
 }
